@@ -33,30 +33,42 @@
         }
         .description a {
             font: 900 24px/1 Lato, sans-serif;
-            color: #da405c;
+            color: #e64966;
             text-align: center;
             text-decoration: none;
             text-transform: uppercase;
             letter-spacing: 2px;
         }
+        @media (max-width: 420px) {
+            .logo {
+                padding-bottom: 10px;
+            }
+            .logo svg {
+                width: 30px;
+                height: 60px;
+            }
+            .description a {
+                font-size: 16px;
+                letter-spacing: 1px;
+            }
+}
     </style>
 </head>
 <body>
     <div class="key-visual">
         <div class="logo">
-            <svg width="100px" height="200px" viewBox="322 190 100 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <svg width="30px" height="60px" viewBox="435 314 30 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <defs>
-                    <rect id="path-1" x="0" y="0" width="100" height="200" rx="50"></rect>
-                    <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="100" height="200" fill="white">
+                    <rect id="path-1" x="0" y="0" width="30" height="60" rx="15"></rect>
+                    <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="30" height="60" fill="white">
                         <use xlink:href="#path-1"></use>
                     </mask>
                 </defs>
-                <g id="red-caps" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(322.000000, 190.000000)">
-                    <path d="M0,100 L100,100 L100,150 C100,177.614237 77.6203091,200 50,200 L50,200 C22.3857625,200 0,177.620309 0,150 L0,100 Z" id="Rectangle" fill="#da405c"></path>
-                    <use id="Rectangle" stroke="#da405c" mask="url(#mask-2)" stroke-width="10" xlink:href="#path-1"></use>
+                <g id="red" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(435.000000, 314.000000)">
+                    <path d="M0,30 L30,30 L30,45 C30,53.2842712 23.2860927,60 15,60 L15,60 C6.71572875,60 0,53.2860927 0,45 L0,30 Z" id="Rectangle" fill="#e64966"></path>
+                    <use id="Rectangle" stroke="#e64966" mask="url(#mask-2)" stroke-width="4" xlink:href="#path-1"></use>
                 </g>
             </svg>
-
         </div>
         <div class="description">
             <a href="#">One Time Capsule</a>
