@@ -1,9 +1,7 @@
 <html>
 <head>
-
-<head>
     <title>Time Capsule One</title>
-    <meta name="description" content="Hello world.">
+    <meta name="description" content="Would you like to send your future a time capsule?">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <link rel="stylesheet" href="fonts/Lato.css">
@@ -26,11 +24,23 @@
             overflow: hidden;
             box-sizing: border-box;
         }
-        .logo svg {
+        .logo .capsule{
             width: 46px;
             height: 100px;
         }
-        .logo svg.mobile {
+        .logo .capsule .caps {
+            width: 46px;
+            height: 50px;
+        }
+        .logo .capsule .caps.a {
+            border-radius: 25px 25px 0 0;
+            background-color: #2D3256;
+        }
+        .logo .capsule .caps.b {
+            border-radius:  0 0 25px 25px;
+            background-color: #E3526D;
+        }
+        .logo .capsule.mobile {
             display: none;
         }
         .description {
@@ -44,7 +54,6 @@
             text-transform: uppercase;
             letter-spacing: 2;
         }
-
         .description a span {
             color: #e3526d;
         }
@@ -52,15 +61,13 @@
             .logo {
                 padding-bottom: 15px;
             }
-            .logo svg {
+            .logo .capsule {
                 width: 30px;
                 height: 60px;
             }
-            .logo svg.desktop {
-                display: none;
-            }
-            .logo svg.mobile {
-                display: block;
+            .logo .capsule .caps {
+                width: 30px;
+                height: 30px;
             }
             .description a {
                 font-size: 16px;
@@ -72,23 +79,10 @@
 <body>
     <div class="key-visual">
         <div class="logo">
-
-            <svg width="46px" height="100px" viewBox="322 190 46 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="desktop">
-                <defs></defs>
-                <g id="blue+red" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(322.000000, 190.000000)">
-                    <path d="M0,50 L46,50 L46,76.9939651 C46,89.6998473 35.7053422,100 23,100 L23,100 C10.2974508,100 0,89.7005933 0,76.9939651 L0,50 Z" id="Rectangle" fill="#E3526D"></path>
-                    <path d="M0,23.0060349 C0,10.3001527 10.2946578,0 23,0 L23,0 C35.7025492,0 46,10.2994067 46,23.0060349 L46,50 L0,50 L0,23.0060349 Z" id="Rectangle" fill="#2D3256"></path>
-                </g>
-            </svg>
-
-            <svg width="30px" height="60px" viewBox="322 190 30 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="mobile">
-                <defs></defs>
-                <g id="blue+red" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(322.000000, 190.000000)">
-                    <path d="M0,30 L30,30 L30,45 C30,53.2842712 23.2860927,60 15,60 L15,60 C6.71572875,60 0,53.2860927 0,45 L0,30 Z" id="Rectangle" fill="#E3526D"></path>
-                    <path d="M0,15 C0,6.71572875 6.71390727,0 15,0 L15,0 C23.2842712,0 30,6.71390727 30,15 L30,30 L0,30 L0,15 Z" id="Rectangle" fill="#2D3256"></path>
-                </g>
-            </svg>
-
+            <div class="capsule">
+                <div class="caps a"></div>
+                <div class="caps b"></div>
+            </div>
         </div>
         <div class="description">
             <a href="#">Time Capsule <span>One</span></a>

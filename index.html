@@ -24,9 +24,23 @@
             overflow: hidden;
             box-sizing: border-box;
         }
-        .logo svg {
+        .logo .capsule {
             width: 44px;
             height: 88px;
+        }
+        .logo .capsule .caps {
+            width: 44px;
+            height: 44px;
+        }
+        .logo .capsule .caps.a {
+            box-sizing: border-box;
+            border: 3px solid #E64966;
+            border-radius: 22px 22px 0 0;
+            border-bottom: none;
+        }
+        .logo .capsule .caps.b {
+            border-radius:  0 0 22px 22px;
+            background-color: #E64966;
         }
         .description {
             padding: 20px 0;
@@ -39,13 +53,23 @@
             text-transform: uppercase;
             letter-spacing: 2px;
         }
+        .description a span {
+            color: #fff;
+        }
         @media (max-width: 420px) {
             .logo {
                 padding-bottom: 10px;
             }
-            .logo svg {
+            .logo .capsule {
                 width: 30px;
                 height: 60px;
+            }
+            .logo .capsule .caps {
+                width: 30px;
+                height: 30px;
+            }
+            .logo .capsule .caps.a {
+                border-width: 2px;
             }
             .description a {
                 font-size: 16px;
@@ -57,18 +81,10 @@
 <body>
     <div class="key-visual">
         <div class="logo">
-            <svg width="30px" height="60px" viewBox="435 314 30 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <defs>
-                    <rect id="path-1" x="0" y="0" width="30" height="60" rx="15"></rect>
-                    <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="30" height="60" fill="white">
-                        <use xlink:href="#path-1"></use>
-                    </mask>
-                </defs>
-                <g id="red" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(435.000000, 314.000000)">
-                    <path d="M0,30 L30,30 L30,45 C30,53.2842712 23.2860927,60 15,60 L15,60 C6.71572875,60 0,53.2860927 0,45 L0,30 Z" id="Rectangle" fill="#e64966"></path>
-                    <use id="Rectangle" stroke="#e64966" mask="url(#mask-2)" stroke-width="4" xlink:href="#path-1"></use>
-                </g>
-            </svg>
+            <div class="capsule">
+                <div class="caps a"></div>
+                <div class="caps b"></div>
+            </div>
         </div>
         <div class="description">
             <a href="#">Time Capsule <span>One</span></a>
