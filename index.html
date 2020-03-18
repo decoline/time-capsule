@@ -7,15 +7,28 @@
     <link rel="stylesheet" href="docs/fonts/Lato.css">
     <style type="text/css" media="screen">
         body {
+            margin: 0;
+            box-sizing: border-box;
+        }
+        p {
+            margin: 0;
+        }
+        .container {
+            width: 100%;
+            height: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
             background-color: #1d2140;
+            transition: background-color 0.35s ease;
         }
-        .key-visual {
+        .content {
             display: flex;
             flex-direction: column;
             align-items: center;
+        }
+        .toggle {
+            cursor: pointer;
         }
         .logo {
             padding: 0 80px 20px;
@@ -34,9 +47,11 @@
         }
         .logo .capsule .caps.a {
             box-sizing: border-box;
+            background-color: #1d2140;
             border: 3px solid #E64966;
             border-radius: 25px 25px 0 0;
             border-bottom: none;
+            transition: border-width 0.5s ease;
         }
         .logo .capsule .caps.b {
             border-radius:  0 0 25px 25px;
@@ -45,16 +60,18 @@
         .description {
             padding: 20px 0;
         }
-        .description a {
+        .description p {
             font: 900 24px/1 Lato, sans-serif;
             color: #e64966;
             text-align: center;
             text-decoration: none;
             text-transform: uppercase;
             letter-spacing: 2px;
+            transition: color 0.5s ease;
         }
-        .description a span {
+        .description p span {
             color: #fff;
+            transition: color 0.5s ease;
         }
         @media (max-width: 420px) {
             .logo {
@@ -75,20 +92,55 @@
                 font-size: 16px;
                 letter-spacing: 1px;
             }
-}
+        }
+        /* Bright color */
+        .container.bright {
+            background-color: #fff;
+        }
+        .bright .logo .capsule .caps.a {
+            border-width: 0;
+            background-color: #2D3256;
+        }
+        .bright .logo .capsule .caps.b {
+            background-color: #E3526D;
+        }
+        .bright .description p {
+            color: #4c507b;
+        }
+        .bright .description p span {
+            color: #e3526d;
+        }
     </style>
 </head>
+
 <body>
-    <div class="key-visual">
-        <div class="logo">
-            <div class="capsule">
-                <div class="caps a"></div>
-                <div class="caps b"></div>
+    <div id="main" class="container">
+        <div class="content">
+            <div class="logo">
+                <div class="capsule toggle" onclick="toggle();">
+                    <div class="caps a"></div>
+                    <div class="caps b"></div>
+                </div>
             </div>
-        </div>
-        <div class="description">
-            <a href="docs">Time Capsule <span>One</span></a>
+            <div class="description toggle" onclick="toggle();">
+                <p>Time Capsule <span>One</span></p>
+            </div>
         </div>
     </div>
 </body>
+
+<script>
+    function toggle() {
+        var element, name, arr;
+        element = document.getElementById("main");
+        name = "bright";
+        arr = element.className.split(" ");
+        if (arr.indexOf(name) == -1) {
+            element.className += " " + name;
+        } else {
+            element.classList.remove("bright");
+        }
+    }
+</script>
+
 </html>
